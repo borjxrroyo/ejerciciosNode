@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<form name="datos">
+<input type="text" id="txt1" value=0 /></br></br>
+<input type="button" value="Nota final" id="bot_inicia" />
+</form>
+</body>
+<script>
+vernota = (numero) => {
+let resultado = numero > 4 ? "Aprobado" : "Suspendido"        // Si el número es mayor a 4, el resultado será aprobado. Si es 4 o inferior, el resultado será suspendido.
+alert(resultado)
+}
+inicia = () => {
+const valor = Number(txt1.value)
+vernota(valor)
+}
+bot_inicia.addEventListener('click', inicia)
+</script>
+</html>
