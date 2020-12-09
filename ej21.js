@@ -5,9 +5,9 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/convierte/', (req, res) => {                    // La aplicación utiliza el apartado "convierte" de Localhost:5000 -> Como si fuera http://miweb.com/convierte/
 const celsius = Number(req.query.celsius)         
-const fahrenheit = Number(req.query.fahrenheit)                 // Se define una constante "euros" que incluye la cantidad de euros pedida en la barra de direcciones
+const fahrenheit = Number(req.query.fahrenheit)
 const resultado_f = (celsius * 1.8) + 32     
-const resultado_c = (fahrenheit - 32) / 1.8                      // Se define una constante "resultado" que almacena el dato introducido y lo multiplica por 1.2
+const resultado_c = (fahrenheit - 32) / 1.8
 const cadena = `<h2> Resultado de la conversión </h2>
 <p> La cantidad de ${celsius} celsius
 convertida a fahrenheit son: </p>
