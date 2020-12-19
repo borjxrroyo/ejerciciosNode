@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head> <meta content="text/html; charset=utf-8">
+
+<script>
+calcula = (valor) => {
+numero = Number(valor)
+const calculo = numero * 1.23;                              /* Se cambia el segundo número por 1.23 */
+// var salida = document.getElementById("salida")
+salida.innerHTML = (`El resultado es ${calculo} `)
+}
+</script>
+
+</head>
+
+
+<body>
+<form name="formulario">
+<input type="text" name="dato1"/></br></br>
+<input type="button" onclick="calcula(formulario.dato1.value)" value="Pulsa"/>
+</form>
+<div id="salida">
+<p>Aquí se verá resultado</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset=UTF-8 />
+
+<script>
+comprobar_edad = (valor) => {
+return valor>0 && valor<120 ?
+valor >= 18 ? "Mayor de edad. Acceso permitido" : (valor < 1 ? "Edad no permitida" : "Menor de edad. Acceso denegado")
+: "El dato introducido no es correcto"
+}
+
+mostrar = (dato) => {
+salida.innerHTML += `<br> Su respuesta: ${dato}`
+}
+
+iniciar = (edad) => {
+const validacion = comprobar_edad(edad)
+mostrar(validacion)
+}
+</script>
+
+
+</head>
+<body>
+<h3>Máquina de votar</h3>
+<p>Introduce edad y pulsa dobleclick.</p>
+<input id="txt_edad" type="text" ondblclick="iniciar(this.value)">
+<div id="salida"></div>
+</body>
+</html>
